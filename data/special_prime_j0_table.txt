@@ -1,0 +1,91 @@
+j = 0 curves y^2 = x^3 + b over p = 2^k - c, p == 1 (mod 3): least c (in the progression c == 3 mod 6 for even k, c == 1 mod 6 for odd k)
+such that some j=0 curve has prime order n (rows 'prime order'), and least c such that in addition the twist has 3*q points (rows 'twist = 3*prime').
+b is the least b giving that order. For k >= 384 only the prime-order criterion was searched.
+Each row was verified by n*P = infinity for random points P (this proves #E = n since n is prime) and primality of p, n (and q).
+PARI check below: expected output is '1 1 1' per row (and '1 1' for the second line of the rows with twist = 3*prime).
+
+--- p = 2^160 - 75,  b = 2  (prime order) ---
+p = 2^160 - 75; n = 1461501637330902918203682487244820394752778939663; b = 2;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^160 - 400347,  b = 6  (prime order, twist = 3*prime) ---
+p = 2^160 - 400347; n = 1461501637330902918203687094428835676550673801883; b = 6;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+q = 487167212443634306067894190334576787587063494459; print(isprime(q), 2*(p+1) - n == 3*q);
+
+--- p = 2^192 - 2625,  b = 7  (prime order) ---
+p = 2^192 - 2625; n = 6277101735386680763835789423049239630206963053826514709771; b = 7;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^192 - 394323,  b = 17  (prime order, twist = 3*prime) ---
+p = 2^192 - 394323; n = 6277101735386680763835789423359157682500025365744367657219; b = 17;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+q = 2092367245128893587945263141018725049901561841061233526643; print(isprime(q), 2*(p+1) - n == 3*q);
+
+--- p = 2^224 - 1275,  b = 6  (prime order) ---
+p = 2^224 - 1275; n = 26959946667150639794667015087019637901048645921160586259561071496361; b = 6;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^224 - 738993,  b = 5  (prime order, twist = 3*prime) ---
+p = 2^224 - 738993; n = 26959946667150639794667015087019621736609907829402724007571042797649; b = 5;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+q = 8986648889050213264889005029006546536888127005226140318212058740933; print(isprime(q), 2*(p+1) - n == 3*q);
+
+--- p = 2^255 - 21109,  b = 23  (prime order) ---
+p = 2^255 - 21109; n = 57896044618658097711785492504343953927076861536870246918659606916235673956967; b = 23;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^255 - 300769,  b = 6  (prime order, twist = 3*prime) ---
+p = 2^255 - 300769; n = 57896044618658097711785492504343953926483922657185345510591411619732465988823; b = 6;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+q = 19298681539552699237261830834781317975595354002818406176288724129393554349859; print(isprime(q), 2*(p+1) - n == 3*q);
+
+--- p = 2^256 - 1539,  b = 5  (prime order) ---
+p = 2^256 - 1539; n = 115792089237316195423570985008687907852920869663551026044856920202296625078603; b = 5;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^256 - 681003,  b = 6  (prime order, twist = 3*prime) ---
+p = 2^256 - 681003; n = 115792089237316195423570985008687907853897092131108306555062787077976131733447; b = 6;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+q = 38597363079105398474523661669562635950880959066724273841284126979283375394807; print(isprime(q), 2*(p+1) - n == 3*q);
+
+--- p = 2^320 - 4875,  b = 6  (prime order) ---
+p = 2^320 - 4875; n = 2135987035920910082395021706169552114602704522359354759040492885190450341850974702267104229126579; b = 6;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^320 - 221517,  b = 10  (prime order, twist = 3*prime) ---
+p = 2^320 - 221517; n = 2135987035920910082395021706169552114602704522358926911297743918633517111175481029429824388621441; b = 10;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+q = 711995678640303360798340568723184038200901507451459542865446432336974113461933356872033261602893; print(isprime(q), 2*(p+1) - n == 3*q);
+
+--- p = 2^384 - 3819,  b = 2  (prime order) ---
+p = 2^384 - 3819; n = 39402006196394479212279040100143613805079739270465446667953706696267857255697506740336736410194737324789793138176369; b = 2;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^448 - 12303,  b = 7  (prime order) ---
+p = 2^448 - 12303; n = 726838724295606890549323807888004534353641360687318060281490199180689917147758874422233704418908915176815247907503256888166200016095551; b = 7;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^512 - 6429,  b = 2  (prime order) ---
+p = 2^512 - 6429; n = 13407807929942597099574024998205846127479365820592393377723561443721764030073410813539899306173531793517664562404382834875950097590950269193755969264732533; b = 2;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
+
+--- p = 2^521 - 2305,  b = 13  (prime order) ---
+p = 2^521 - 2305; n = 6864797660130609714981900799081393217269435300143305409394463459185543183397650820228641093656340594240684770726332174823930638891556489663157758254457558997; b = 13;
+E = ellinit([0,b], p); P = random(E);
+print(isprime(p), isprime(n), ellmul(E,P,n) == [0]);
