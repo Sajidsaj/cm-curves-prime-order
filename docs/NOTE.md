@@ -108,3 +108,4 @@ A399358: primes `p` such that `y^2 = x^3 + 7` over `GF(p)` has a prime number of
 * D. Zywina, *A refinement of Koblitz's conjecture*, arXiv:0909.5280.
 * Certicom Research, *SEC 2: Recommended Elliptic Curve Domain Parameters*, Version 2.0, 27 January 2010.
 * DiSSECT, standard curves database, https://dissect.crocs.fi.muni.cz
+* R. Bröker, P. Stevenhagen, Constructing elliptic curves of prime order, arXiv:0712.2022 (the CM method, including CM by Z[zeta_3], i.e. j = 0).
