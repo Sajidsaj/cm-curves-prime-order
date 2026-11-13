@@ -1,6 +1,6 @@
 # Prime-order and twist-secure elliptic curves with complex multiplication (j = 0 and j = 1728)
 
-[![DOI](https://zenodo.org/badge/1455401442.svg)](https://doi.org/10.5281/zenodo.24200360)
+         [![DOI](https://zenodo.org/badge/1455401442.svg)](https://doi.org/10.5281/zenodo.24200360)
 
 Computational notes, data and verification scripts about curves `y^2 = x^3 + b` (j = 0, the family of
 secp256k1) and `y^2 = x^3 + A*x` (j = 1728) over prime fields.
